@@ -36,9 +36,27 @@ public class AddComment extends HttpServlet {
 		
 		out.println("<h1>Add Comment</h1>");
 		out.println("<form action=\"AddComment\" method=\"post\">");
-		out.println("	Name: <input type=\"text\" name=\"name\"><br>");
+		
+		String name = request.getParameter("name");
+		if (name == null)
+			name = "";
+		
+		
+		out.println("	Name: <input type=\"text\" name=\"name\" value=\"" + name + "\"><br>");
+		
+		if (request.getAttribute("nameError") != null)
+			out.println("  <p class=\"text-danger\">Please enter your name</p>");
+		
 		out.println("	Message: <br>");
-		out.println("	<textarea name=\"message\"></textarea><br>");
+		
+		String message = request.getParameter("message");
+		message = message == null ? "" : message;
+		
+		out.println("	<textarea name=\"message\">" + message + "</textarea><br>");
+		
+		if (request.getAttribute("messageError") != null)
+			out.println("  <p class=\"text-danger\">Please enter a message</p>");
+		
 		out.println("	<input type=\"submit\" name=\"submitBtn\" value=\"Add Comment\">");
 		out.println("</form>");
 	
@@ -49,18 +67,43 @@ public class AddComment extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		// Read the name and message from the request
-		String name = request.getParameter("name");
-		String message = request.getParameter("message");
-		
-		// Get a reference to the guest book
-		ArrayList<GuestBookEntry> guestbookEntries = (ArrayList<GuestBookEntry>) getServletContext().getAttribute("guestbookEntries");
-		
-		// Adding a new entry to the guest book
-		guestbookEntries.add(new GuestBookEntry(name, message));
+		// Was the form submitted?
+		if ( request.getParameter("submitBtn") != null) {
+			// Yes, it was submitted
+			
+			// Read the name and message from the request
+			String name = request.getParameter("name");
+			String message = request.getParameter("message");
+			
+			boolean isValidName = name != null && name.trim().length() > 0;
+			boolean isValidMessage = message != null && message.trim().length() > 0;
+			
+			if (isValidName && isValidMessage) {
+				// Get a reference to the guest book
+				ArrayList<GuestBookEntry> guestbookEntries = (ArrayList<GuestBookEntry>) getServletContext().getAttribute("guestbookEntries");
+				
+				// Adding a new entry to the guest book
+				guestbookEntries.add(new GuestBookEntry(name, message));	
+			}
+			else {
+				
+				// Introduce a new scope: REQUEST scope
+				if (!isValidName)
+					request.setAttribute("nameError", true);
+				
+				if (!isValidMessage)
+					request.setAttribute("messageError", true);
+				
+				
+				doGet(request, response);
+				return;
+			}
+			
+		}
 		
 		// Send the user (redirect) back to the main page
 		response.sendRedirect("GuestBook");
+		
 		
 	}
 

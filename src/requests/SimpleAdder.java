@@ -38,9 +38,14 @@ public class SimpleAdder extends HttpServlet {
 		String num1 = request.getParameter("num1");
 		String num2 = request.getParameter("num2");
 		
-		int sum = Integer.parseInt( num1 ) + Integer.parseInt( num2 );
+		try {
+			int sum = Integer.parseInt( num1 ) + Integer.parseInt( num2 );
 		
-		out.println(num1 + " + " + num2 + " = " + sum);
+			out.println(num1 + " + " + num2 + " = " + sum);
+		}
+		catch(Exception e) {
+			out.println("<p class=\"text-danger\">Please enter integral values</p>");
+		}
 		
 		out.println("</div>");
 		out.println("</body>");
@@ -51,3 +56,9 @@ public class SimpleAdder extends HttpServlet {
 	}
 
 }
+
+
+
+
+
+
