@@ -30,7 +30,7 @@ public class GuestBook extends HttpServlet {
 		guestbookEntries.add( new GuestBookEntry("Joe Boxer", "Howdy!"));
 		
 		// Add the array list to the application scope (Servlet Context)
-		getServletContext().setAttribute("guestbookEntries", guestbookEntries);
+		getServletContext().setAttribute("guestbookEntries", guestbookEntries); 
 		
 	}
 	
