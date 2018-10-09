@@ -35,9 +35,11 @@ public class Upload extends HttpServlet {
 
         // Configure a repository (to ensure a secure temp location is used)
         ServletContext servletContext = this.getServletConfig()
-            .getServletContext();
+        										.getServletContext();
+        
         File repository = (File) servletContext
             .getAttribute( "javax.servlet.context.tempdir" );
+        
         factory.setRepository( repository );
 
         // Create a new file upload handler
@@ -45,6 +47,7 @@ public class Upload extends HttpServlet {
 
         // Count how many files are uploaded
         int count = 0;
+        
         // The directory we want to save the uploaded files to.
         String fileDir = getServletContext().getRealPath( "/WEB-INF/uploads" );
 
@@ -52,6 +55,7 @@ public class Upload extends HttpServlet {
         try
         {
             List<FileItem> items = upload.parseRequest( request );
+            
             for( FileItem item : items )
             {
                 // If the item is not a form field - meaning it's an uploaded

@@ -30,7 +30,7 @@ public class GuestBook extends HttpServlet {
 		guestbookEntries.add( new GuestBookEntry("Joe Boxer", "Howdy!"));
 		
 		// Add the array list to the application scope (Servlet Context)
-		getServletContext().setAttribute("guestbookEntries", guestbookEntries); 
+		getServletContext().setAttribute("guestbookEntries", guestbookEntries);
 		
 	}
 	
@@ -84,7 +84,6 @@ public class GuestBook extends HttpServlet {
 		out.println("    <option>ID</option>");
 		out.println("    <option>Name</option>");
 		out.println("    <option>Message</option>");
-		out.println("    <option>All Text Fields</option>");
 		out.println("  </select>");
 		out.println("  <input type=\"submit\" name=\"searchBtn\" value=\"Search\">");
 		out.println("</form>");
@@ -116,6 +115,12 @@ public class GuestBook extends HttpServlet {
 		
 		out.println("<a class=\"btn btn-primary\" href=\"AddComment\">Add a Comment</a>");
 		
+		out.println("<a class=\"btn btn-info\" href=\"../cookies/AddCommentWithCookies\">Add a Comment (with Cookies)</a>");
+		
+		out.println("<a class=\"btn btn-warning\" href=\"../sessions/AddCommentWithSessions\">Add a Comment (with Sessions)</a>");
+		
+		
+		//JSESSIONID	18DD3334D388CA09D6BA50DBCEACB049	localhost	/cs3220stu120	Session	42 B	✓		
 		out.println("</div>");
 		out.println("</body>");
 		out.println("</html>");		
