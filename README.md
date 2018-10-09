@@ -10,3 +10,4 @@
 - 2018-09-15 [Part1](http://albertcervantes.com/cs3220/lectures/cs3220-2018-09-15-s-part1.mp4) [Part2](http://albertcervantes.com/cs3220/lectures/cs3220-2018-09-15-s-part2.mp4)
 - 2018-09-22 [Lecture](http://albertcervantes.com/cs3220/lectures/cs3220-2018-09-22-s-part1.mp4), [Deploying to CS3](http://albertcervantes.com/cs3220/lectures/cs3220-2018-09-22-s-part2.mp4), [Adding Search by ID to Guest Book](http://albertcervantes.com/cs3220/lectures/cs3220-2018-09-22-s-part3.mp4)
 - [2018-09-29](http://albertcervantes.com/cs3220/lectures/cs3220-2018-09-29-s.mp4)
+- [2018-10-06](http://albertcervantes.com/cs3220/lectures/cs3220-2018-10-06-s.mp4)
