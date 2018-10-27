@@ -12,3 +12,4 @@
 - [2018-09-29](http://albertcervantes.com/cs3220/lectures/cs3220-2018-09-29-s.mp4)
 - [2018-10-06](http://albertcervantes.com/cs3220/lectures/cs3220-2018-10-06-s.mp4)
 - [2018-10-12](http://albertcervantes.com/cs3220/lectures/cs3220-2018-10-12-s.mp4)
+- [2018-10-27](http://albertcervantes.com/cs3220/lectures/cs3220-2018-10-27-s.mp4) JSP Scripting Elements & Directives, and Java Beans
