@@ -15,3 +15,5 @@
 - [2018-10-27](http://albertcervantes.com/cs3220/lectures/cs3220-2018-10-27-s.mp4) JSP Scripting Elements & Directives, and Java Beans
 - 2018-11-03
 - [2018-11-10](http://albertcervantes.com/cs3220/lectures/cs3220-2018-11-10-s.mp4) Expression Language (EL) and JSP Standard Tag Library (JSTL)
+- [2018-11-17](http://albertcervantes.com/cs3220/lectures/cs3220-2018-11-17-s.mp4) Model-View-Controller (MVC)
+- 2018-11-24 - Holiday
