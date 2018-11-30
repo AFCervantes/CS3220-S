@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import models.GuestBookEntry;
 
-@WebServlet("/mvc/Delete")
+@WebServlet("/mvc/DeleteComment")
 public class DeleteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   

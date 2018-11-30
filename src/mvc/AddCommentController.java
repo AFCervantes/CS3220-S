@@ -17,44 +17,45 @@ public class AddCommentController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.getRequestDispatcher("/WEB-INF/mvc/AddComment.jsp")
-					.forward(request, response);
+		request
+			.getRequestDispatcher("/WEB-INF/mvc/AddComment.jsp")
+			.forward(request, response);
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		// Read the values of name and message from the request
-		String name = request.getParameter("name");
-		String message = request.getParameter("message");
-		
-		boolean isValidName = name != null && name.trim().length() > 0;
-		boolean isValidMessage = message != null && message.trim().length() > 0;
-		
-		if (isValidName && isValidMessage) {
-			// Get a reference to the guest book
-			ArrayList<GuestBookEntry> guestbookEntries = (ArrayList<GuestBookEntry>) getServletContext().getAttribute("guestbookEntries");
-			
-			// Add a new entry
-			guestbookEntries.add(new GuestBookEntry(name, message));
-			
-			// Redirect the User back to the main page
-			response.sendRedirect("GuestBook");
-		}
-		else {
-			
-			if (!isValidName)
-				request.setAttribute("nameError", "Please enter your name");
-			
-			if (!isValidMessage)
-				request.setAttribute("messageError", "Please enter a message");
-			
-			
-			doGet(request, response);
-			return;
-			
-		}
-		
+				String name = request.getParameter("name");
+				String message = request.getParameter("message");
+				
+				boolean isValidName = name != null && name.trim().length() > 0;
+				boolean isValidMessage = message != null && message.trim().length() > 0;
+				
+				if (isValidName && isValidMessage) {
+					// Get a reference to the guest book
+					ArrayList<GuestBookEntry> guestbookEntries = (ArrayList<GuestBookEntry>) getServletContext().getAttribute("guestbookEntries");
+					
+					// Add a new entry
+					guestbookEntries.add(new GuestBookEntry(name, message));
+					
+					// Redirect the User back to the main page
+					response.sendRedirect("GuestBook");
+				}
+				else {
+					
+					if (!isValidName)
+						request.setAttribute("nameError", "Please enter your name");
+					
+					if (!isValidMessage)
+						request.setAttribute("messageError", "Please enter a message");
+					
+					
+					doGet(request, response);
+					return;
+					
+				}
+				
 	}
 
 }
