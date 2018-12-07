@@ -17,4 +17,4 @@
 - [2018-11-10](http://albertcervantes.com/cs3220/lectures/cs3220-2018-11-10-s.mp4) Expression Language (EL) and JSP Standard Tag Library (JSTL)
 - [2018-11-17](http://albertcervantes.com/cs3220/lectures/cs3220-2018-11-17-s.mp4) Model-View-Controller (MVC)
 - 2018-11-24 - Holiday
-- 2018-11-17 [Introduction to Databases](http://albertcervantes.com/cs3220/lectures/cs3220-2018-12-01-s.mp4), [Introduction to JDBC](http://albertcervantes.com/cs3220/lectures/cs3220-2018-12-01-s-jdbc.mp4) 
+- 2018-12-01 [Introduction to Databases](http://albertcervantes.com/cs3220/lectures/cs3220-2018-12-01-s.mp4), [Introduction to JDBC](http://albertcervantes.com/cs3220/lectures/cs3220-2018-12-01-s-jdbc.mp4) 
