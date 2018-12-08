@@ -18,3 +18,4 @@
 - [2018-11-17](http://albertcervantes.com/cs3220/lectures/cs3220-2018-11-17-s.mp4) Model-View-Controller (MVC)
 - 2018-11-24 - Holiday
 - 2018-12-01 [Introduction to Databases](http://albertcervantes.com/cs3220/lectures/cs3220-2018-12-01-s.mp4), [Introduction to JDBC](http://albertcervantes.com/cs3220/lectures/cs3220-2018-12-01-s-jdbc.mp4) 
+- 2018-12-08 [Introduction to JSTL SQL](http://albertcervantes.com/cs3220/lectures/cs3220-2018-12-08-s-jstl-sql.mp4), [Introduction to Custom Tags](http://albertcervantes.com/cs3220/lectures/cs3220-2018-12-08-s-custom-tags.mp4) 
