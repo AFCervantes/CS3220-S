@@ -23,7 +23,6 @@
 
 	<table border="1">
 		<tr><th>Index</th><th>Name</th><th>Message</th><th>Date</th></tr>
-		
 		<c:forEach items="${gb.entries}" var="entry" varStatus="status">
 			<tr>
 			  <td>${status.index+1}</td>
@@ -38,7 +37,6 @@
 			  </td>
 			</tr>
 		</c:forEach>
-		
 	</table>
 
 </c:if>

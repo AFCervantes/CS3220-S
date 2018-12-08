@@ -4,13 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hello JSP</title>
+<title>Insert title here</title>
 </head>
 <body>
 
-<h1>
-	Hello World on <%= new java.util.Date() %>
-</h1>
+<h1>Hello, World on <%= new java.util.Date() %></h1>
 
 </body>
 </html>

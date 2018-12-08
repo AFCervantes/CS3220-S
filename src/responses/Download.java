@@ -11,17 +11,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/responses/Download", "/image.jpg"})
+//ViewImage?albumId=1&photoId=3
+
+@WebServlet(urlPatterns = {"/responses/Download", "/image.jpg", "/ViewImage"})
 public class Download extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
     protected void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException
     {
+    	
+//    	int photoId = Integer.parseInt(request.getParameter("photoId"));
+//    	int albumId = Integer.parseInt(request.getParameter("albumId"));
+//    	
+//    	models.Photo photo = getPhoto(albumId, photoId);
+    	
         // Get the path to the file and create a java.io.File object
         String path = getServletContext()
-        					.getRealPath( "/WEB-INF/uploads/Unknown.jpg" );
-        
+        					.getRealPath( "/WEB-INF/uploads/Unknown.jpg"); //" + photo.getFilename() );
         File file = new File( path );
 
         // Set the response headers. File.length() returns the size of the file

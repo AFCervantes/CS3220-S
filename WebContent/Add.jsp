@@ -7,29 +7,30 @@
 <title>JSP Adder</title>
 </head>
 <body>
-<h1>
 
 <%
 
-	int num1, num2;
+// Defined here for scope
+int num1;
+int num2;
 
-	try{
-		num1 = Integer.parseInt(request.getParameter("num1"));
-		num2 = Integer.parseInt(request.getParameter("num2"));
-	} catch(Exception e){
-		response.sendRedirect("JspAdder.html");
-		return;
-	}
+try{
+	num1 = Integer.parseInt( request.getParameter("num1"));
+	num2 = Integer.parseInt( request.getParameter("num2"));
+	
+}catch(Exception e){
+	response.sendRedirect("JspAdder.html");
+	return;
+}
 
 %>
 
-
+The sum of 
 	<%= num1 %> 
 	+ 
-	<%= num2 %>
+	<%= num2 %> 
 	= 
 	<%= num1 + num2 %>
-</h1>
 
 </body>
 </html>
